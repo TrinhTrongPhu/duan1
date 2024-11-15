@@ -15,10 +15,10 @@
                 <label for="register-password">Password</label>
                 <input type="password" name="pass" placeholder="Enter your password" required>
             </div>
-            <!-- <div class="form-group">
+            <div class="form-group">
                 <label for="register-confirm-password">Confirm Password</label>
                 <input type="password" name="confirm-password" placeholder="Confirm your password" required>
-            </div> -->
+            </div>
             <input type="submit" class="btn" value="Register" name="signUp"> <br> <br>
             <a href="#" class="toggle-link" onclick="toggleForms()">Already have an account? Login</a>
         </form>
