@@ -1,35 +1,28 @@
-<?php include "view/Header.php"?>
-<div class="row mb">
-            <div class="boxtrai mr">
-                <div class="row mb">
-                    <div class="boxtitle">Đăng ký tài khoản </div>
-                    <div class="row boxcontent formtkhoan">
-                        <form action="index.php?act=signUp" method="post">
-                            <div class="row mb10">
-                                Email 
-                                <input type="email" name="email" >
-                            </div>
-                            <div class="row mb10">
-                                Tên đăng nhập 
-                                <input type="text" name="user" >
-                            </div>
-                            <div class="row mb10">
-                                Mật khẩu 
-                                <input type="password" name="pass" >
-                            </div>
-                            <div class="row mb10">
-                                <input type="submit" value="Đăng ký" name="signUp" >
-                            </div>
-                            <div class="row mb10">
-                                <input type="reset" value="Nhập lại">
-                            </div>
-                        </form>
-                        <?php 
-                        if(isset($thongbao)&&($thongbao!="")) echo $thongbao;
-                        ?>
-                    </div>
-                </div>
-            </div>
 
+<link rel="stylesheet" href="style.css">
+<div class="container1">
+<form id="register-form" action="index.php?act=signUp" method="post" style="display: none;">
+            <h2>Register</h2>
+            <div class="form-group">
+                <label for="register-email">Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="login-email">UserName</label>
+                <input type="text" name="user" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Password</label>
+                <input type="password" name="pass" placeholder="Enter your password" required>
+            </div>
+            <!-- <div class="form-group">
+                <label for="register-confirm-password">Confirm Password</label>
+                <input type="password" name="confirm-password" placeholder="Confirm your password" required>
+            </div> -->
+            <input type="submit" class="btn" value="Register" name="signUp"> <br> <br>
+            <a href="#" class="toggle-link" onclick="toggleForms()">Already have an account? Login</a>
+        </form>
+        <?php 
+            if(isset($thongbao)&&($thongbao!="")) echo $thongbao;
+        ?>
 </div>
-<?php include "view/Footer.php"?>
