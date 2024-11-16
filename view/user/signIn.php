@@ -12,9 +12,11 @@ include "view/user/signUp.php" ?>
                         <h2>Xin chào <?=$username?></h2>
                     </div>
                     <div class="row mb10">
-                        <li><a href="index.php?act=quenmk">Đổi mật khẩu</a></li>
+                        
+                        <li><a href="index.php?act=quenmk">Quên mật khẩu</a></li>
                         <li><a href="index.php?act=edit_user">Cập nhật tài khoản</a></li>
                         <li><a href="index.php?act=logOut">Thoát</a></li>
+                        
                         <?php } else { ?>
                         
        

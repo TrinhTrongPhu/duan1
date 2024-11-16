@@ -32,6 +32,11 @@
 .btn:hover {
     background: #6a11cb;
 }
+.btn2>li {
+    /* display: block; */
+    text-decoration: none;
+    color: black;
+}
 .username{
     width: 100%;
 }
