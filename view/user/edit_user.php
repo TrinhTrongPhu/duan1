@@ -1,39 +1,39 @@
-<div class="row mb">
+<link rel="stylesheet" href="style.css">
+<div class="container1">
             <div class="boxtrai mr">
                 <div class="row mb">
-                    <div class="boxtitle">Cập nhật tài khoản </div>
+                    <div class="boxtitle"><h2>Cập nhật tài khoản </h2></div>
                     <div class="row boxcontent formtkhoan">
                         <?php 
                             if(isset($_SESSION['user'])&&(is_array($_SESSION['user']))){
-                                $user = $_SESSION['user'];
+                                extract($_SESSION['user']);
 
                             }
                         ?>
                         <form action="index.php?act=edit_user" method="post">
-                            <div class="row mb10">
-                                Email 
+                            <div class="form-group">
+                                <label for="">Email</label> 
                                 <input type="email" name="email" value="<?=$email?>" >
                             </div>
-                            <div class="row mb10">
-                                Tên đăng nhập 
+                            <div class="form-group">
+                                <label for="">UserName</label> 
                                 <input type="text" name="user" value="<?=$username?>" >
                             </div>
-                            <div class="row mb10">
-                                Mật khẩu 
+                            <div class="form-group">
+                                <label for="">Password</label>
                                 <input type="password" name="pass" value="<?=$password?>" >
                             </div>
-                            <div class="row mb10">
-                                Địa chỉ 
+                            <div class="form-group">
+                                <label for="">Address</label> 
                                 <input type="text" name="address" value="<?=$address?>" >
                             </div>
-                            <div class="row mb10">
-                                Số điện thoại 
+                            <div class="form-group">
+                                <label for="">Phone</label> 
                                 <input type="text" name="phone" value="<?=$phone?>" >
                             </div>
-                            <div class="row mb10">
-                                <input type="hidden" name="id" value="<?=$id?>" >
-                                <input type="submit" value="Cập nhật" name="update" >
-                                <input type="reset" value="Nhập lại">
+                            <div class="form-group">
+                                <input class="btn" type="hidden" name="id" value="<?=$id?>" >
+                                <input class="btn" type="submit" value="Cập nhật" name="update" >
                             </div>
                         </form>
                         <?php 
