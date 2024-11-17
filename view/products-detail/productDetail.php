@@ -7,6 +7,7 @@ if (isset($_GET['id'])) {
 }
 ?>
 <section>
+    <!-- <?php echo ($productDetail['id']) ?> -->
     <!-- Open Content -->
     <section class="bg-light">
         <div class="container pb-5">
@@ -134,13 +135,13 @@ if (isset($_GET['id'])) {
                             <h6>Description:</h6>
                             <p><?php echo ($productDetail['description']) ?></p>
 
-                            <form action="" method="GET">
-                                <input type="hidden" name="product-title" value="Activewear">
+                            <form action="index.php?act=cart&action=add" method="post">
+                                
                                 <div class="row">
                                     <div class="col-auto">
                                         <ul class="list-inline pb-3">
                                             <li class="list-inline-item">Size :
-                                                <input type="hidden" name="product-size" id="product-size" value="S">
+                                                
                                             </li>
                                             <li class="list-inline-item"><span class="btn btn-success btn-size"><?php echo ($productDetail['size']) ?></span></li>
                                         </ul>
@@ -148,7 +149,7 @@ if (isset($_GET['id'])) {
                                     <div class="col-auto">
                                         <ul class="list-inline pb-3">
                                             <li class="list-inline-item">Color :
-                                                <input type="hidden" name="product-size" id="product-size" value="S">
+                                                
                                             </li>
                                             <li class="list-inline-item"><span class="btn btn-success btn-size"><?php echo ($productDetail['color']) ?></span></li>
                                         </ul>
@@ -157,7 +158,7 @@ if (isset($_GET['id'])) {
                                         <ul class="list-inline pb-3">
                                             <li class="list-inline-item text-right">
                                                 Quantity
-                                                <input type="hidden" name="product-quanity" id="product-quanity" value="1">
+                                                
                                             </li>
                                             <li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
                                             <li class="list-inline-item"><span class="badge bg-secondary" id="var-value">1</span></li>
@@ -167,7 +168,17 @@ if (isset($_GET['id'])) {
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg " name="submit" value="addtocard">Thêm giỏ hàng</button>
+                                    
+                                            <input type="hidden" name="product_id" value="<?php echo $productDetail['id']; ?>">
+                                            <input type="hidden" name="product_name" value="<?php echo htmlspecialchars($productDetail['product_name']); ?>">
+                                            <input type="hidden" name="product_price" value="5000000">
+                                            <input type="hidden" name="quantity" id="product-quanity" value="1">
+                                            <input type="hidden" name="product_size" value="<?php echo $productDetail['size']; ?>">
+                                            <input type="hidden" name="product_color" value="<?php echo $productDetail['color']; ?>">
+                                            <button type="submit" class="btn btn-success btn-lg">Thêm giỏ hàng</button>
+                                      
+                                        <!-- <input type="submit" class="btn btn-success btn-lg " name="addtocart" value="Thêm giỏ hàng"> -->
+
                                     </div>
                                 </div>
                             </form>

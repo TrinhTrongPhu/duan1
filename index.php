@@ -6,6 +6,7 @@ include "model/pdo.php";
 include "model/user.php";
 include "model/sanpham.php";
 include "model/productDetail.php";
+include "model/cart.php";
 include "global.php";
 
 
@@ -61,16 +62,27 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             session_destroy();
             header("Location: index.php");
             break;
+
         case 'shopList':
             include "view/shopList.php";
             break;
+
         case 'productDetail':
             include 'view/products-detail/productDetail.php';
             break;
+
         case 'cart':
-            include "view/Cart.php";
+            include "view/cart.php";
             break;
 
+        case 'checkout':
+            include 'view/checkout.php';
+            break;
+        
+        case 'complete':
+            include 'view/complete.php';
+            break;   
+            
         case 'about':
             include "cilent/about.html";
             break;
