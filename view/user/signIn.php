@@ -1,5 +1,7 @@
 <?php 
-// session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start(); // Chỉ khởi tạo session nếu chưa bắt đầu
+}
 include "view/user/signUp.php" ?>
 <link rel="stylesheet" href="style.css">
         <div class="username">
