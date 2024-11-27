@@ -5,6 +5,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 // Nếu action là thêm sản phẩm vào giỏ hàng
 if (isset($_GET['action']) && $_GET['action'] === 'add') {
+    $product_img = $_POST['product_img'];
     $product_id = $_POST['product_id'];
     $product_name = $_POST['product_name'];
     $product_price = $_POST['product_price'];
@@ -14,6 +15,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'add') {
     
     // Tạo sản phẩm
     $product = [
+        'img'=> $product_img,
         'id' => $product_id,
         'name' => $product_name,
         'price' => $product_price,
