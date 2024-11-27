@@ -190,4 +190,6 @@ if (isset($_GET['id'])) {
         </div>
     </section>
     <!-- Close Content -->
+    
 </section>
+<?php include "view/binhluanform.php" ?>
