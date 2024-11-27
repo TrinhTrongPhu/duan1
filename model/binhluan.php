@@ -1,18 +1,18 @@
 <?php
-    function insert_binhluan($noidung, $iduser, $idpro, $ngaybinhluan) {
-        $sql = "insert into binhluan(noidung, iduser, idpro, ngaybinhluan) values('$noidung', '$iduser', '$idpro', '$ngaybinhluan')";
+    function insert_reviews($noidung, $User_id, $Product_id, $Created_at) {
+        $sql = "insert into reviews(noidung, User_id, Product_id, Created_at) values('$noidung', '$User_id', '$Product_id', '$Created_at')";
         pdo_execute($sql);
     }
-    function loadall_binhluan($idpro) {
-        $sql = "select * from binhluan where 1";
-        if($idpro > 0)
-        $sql.=" AND idpro= '".$idpro."'";
+    function loadall_reviews($Product_id) {
+        $sql = "select * from reviews where 1";
+        if($Product_id > 0)
+        $sql.=" AND Product_id= '".$Product_id."'";
         $sql.=" order by id desc";
         $listbl = pdo_query($sql);
         return $listbl;
     }
-    function delete_binhluan($id) {
-        $sql = "delete from binhluan where id =".$id;
+    function delete_reviews($id) {
+        $sql = "delete from reviews where id =".$id;
         pdo_execute($sql);
     }
 ?>

@@ -78,11 +78,18 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'checkout':
             include 'view/checkout.php';
             break;
-        
+
+        case 'checkoutDone':
+
+            
+
+
+            break;
+
         case 'complete':
             include 'view/complete.php';
-            break;   
-            
+            break;
+
         case 'about':
             include "cilent/about.html";
             break;
